@@ -1,0 +1,53 @@
+ <html>
+     <body>
+ 
+      <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Text Changed.";
+}
+</script>
+<script>
+function myFunction2() {
+    alert(1 + 1);
+}
+</script>
+<script>
+function myFunction3() {
+    console.log(1 + 0);
+}
+</script>
+
+<img src="https://mertcinarsah.w3spaces.com/logo.png" alt="logo">
+
+<hr>
+
+
+|
+<a href="https://mertcinarsah.w3spaces.com/index.html">Home</a>
+|
+<button type="button">Codes</button>
+|
+<a href="https://mertcinarsah.w3spaces.com/about.html">About</a>
+|
+
+<hr>
+
+   <fieldset>
+<legend> try some of my codes! </legend>     
+<p id="demo">A Text.</p>
+<button type="button" onclick="myFunction()">Change The text</button>
+<hr>
+<button type="button" onclick="myFunction2()">What's is 1+1?</button>
+<hr>
+<h4>
+Press F12 (if it isn't working, press Ctrl + Shift + C) <br>
+Select console <br>
+Press the button.
+<br>
+if you are seeing a 1, it worked!
+</h4>
+<button type="button" onclick="myFunction3()">Try</button>
+
+    </fieldset>
+     </body>
+ </html>

@@ -1,0 +1,44 @@
+<html>
+<body>
+    <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Text Changed.";
+}
+</script>
+<script>
+function myFunction2() {
+    alert(1 + 1);
+}
+</script>
+
+<img src="https://mertcinarsah.w3spaces.com/logo.png" alt="logo">
+
+<hr>
+
+
+|
+<button type="button">Home</button>
+|
+<a href="https://mertcinarsah.w3spaces.com/codes.html">Codes</a>
+|
+<a href="https://mertcinarsah.w3spaces.com/about.html">About</a>
+|
+
+<hr>
+    <fieldset>
+    <legend> welcome to: </legend>
+<h3> my website </h3>
+<h4> i am a programmer </h4>
+    </fieldset>
+    <hr>
+    <fieldset>
+<legend> try some of my codes! </legend>     
+<p id="demo">A Text.</p>
+<button type="button" onclick="myFunction()">Change The text</button>
+<hr>
+<br>
+<a href="https://mertcinarsah.w3spaces.com/codes.html">Try other codes!</a>
+
+    </fieldset>
+</body>
+</html>

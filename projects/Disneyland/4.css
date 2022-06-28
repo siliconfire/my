@@ -1,0 +1,7 @@
+fieldset {
+background: linear-gradient(white, white, lightBlue, blue);
+}
+
+button {
+    background: linear-gradient(blue, lightBlue);
+}
