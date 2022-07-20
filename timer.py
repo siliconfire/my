@@ -47,7 +47,7 @@ print("loading...")     # timer going to start in 5 seconds
 timer_duration = timer_duration * 60
 oldtimer_duration = timer_duration
 timer_break = timer_break * 60
-oldtimer_break = timerbreak
+oldtimer_break = timer_break
 oldtimer_repeats = timer_repeats
 print("loaded.")
 print("")
@@ -74,6 +74,9 @@ while timer_repeats > 0:
         timer_break = timer_break - 1
         time.sleep(1)
     timer_break = oldtimer_break
+    print("")
+    print("")
+    input("(!) Press ENTER to continue...")
     timer_repeats = timer_repeats - 1
 print("Timer ended!")
 print("")
