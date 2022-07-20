@@ -44,10 +44,10 @@ print("")
 print("(!) you can fullscreen this window by pressing F11")
 print("")
 print("loading...")     # timer going to start in 5 seconds
-oldtimer_duration = timer_duration
 timer_duration = timer_duration * 60
-oldtimer_break = timer_break
+oldtimer_duration = timer_duration
 timer_break = timer_break * 60
+oldtimer_break = timerbreak
 oldtimer_repeats = timer_repeats
 print("loaded.")
 print("")
