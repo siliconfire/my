@@ -18,11 +18,11 @@ import sys      # Import sys module for exit function.
 ##########################
     
 # how long should the timer be? (default: 25 minutes)
-timer_duration = 25
+timer_duration = 0.1
 # how long should the timer wait between each working thing? (default: 5 minutes)
-timer_break = 5
+timer_break = 0.1
 # how many times should the timer be repeated? (default: 4)
-timer_repeats = 4
+timer_repeats = 2
 
 # note: the times are in minutes.
 
