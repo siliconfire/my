@@ -16,29 +16,30 @@ totp_code = "jgc5sre7eshuskuc"
 
 #code start
 totp = pyotp.TOTP(totp_code)
-input("(!) doğrulama kodunuzu görmek için ENTER basınız.")
-os.system("cls")
 print("----------------------------------------------------")
-print("Mineland için doğrulama kodunuzu kimseyle paylaşmayınız.")
+print("Doğrulama kodunuzu kimseyle paylaşmayınız.")
 print("")
-print(" " + totp.now())
+print("[KODU GORMEK ICIN ENTER BASIN]")
+print("")
+print("")
 print("")
 print("made by github.com/trashbin7")
 print("----------------------------------------------------")
-print("")
-print("")
-input("(!) bir kere daha doğrulama kodu almak için ENTER basın.")
+input("")
 os.system("cls")
-print("----------------------------------------------------")
-print("Mineland için doğrulama kodunuzu kimseyle paylaşmayınız.")
-print("")
-print(" " + totp.now())
-print("")
-print("made by github.com/trashbin7")
-print("----------------------------------------------------")
-print("")
-print("")
-input("(X) çıkmak için ENTER basın.")
-os.system("cls")
+
+while True:
+
+    print("----------------------------------------------------")
+    print("Doğrulama kodunuzu kimseyle paylaşmayınız.")
+    print("")
+    print(totp.now() + " " + "time_remaining")      #note to myself: remove the "" before fixing
+    print("(kodu yenilemek için ENTER basın.)")
+    print("")
+    print("")
+    print("made by github.com/trashbin7")
+    print("----------------------------------------------------")
+    time.sleep(1)
+    os.system("cls")
 
 #code end
