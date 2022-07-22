@@ -69,6 +69,8 @@ while timer_repeats > 0:
     print("")
     print("")
     input("(!) Press ENTER to start break...")
+    print("")
+    print("")
     while timer_break > 0:
         print(f"{timer_break} seconds left.")
         timer_break = timer_break - 1
