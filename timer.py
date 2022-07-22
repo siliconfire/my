@@ -18,9 +18,9 @@ import sys      # Import sys module for exit function.
 ##########################
     
 # how long should the timer be? (default: 25 minutes)
-timer_duration = 0.1
+timer_duration = 25
 # how long should the timer wait between each working thing? (default: 5 minutes)
-timer_break = 0.1
+timer_break = 5
 # how many times should the timer be repeated? (default: 4)
 timer_repeats = 2
 
@@ -77,6 +77,8 @@ while timer_repeats > 0:
     print("")
     print("")
     input("(!) Press ENTER to continue...")
+    print("")
+    print("")
     timer_repeats = timer_repeats - 1
 print("Timer ended!")
 print("")
