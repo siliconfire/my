@@ -1,5 +1,14 @@
+# imports
+import os
+import sys
+import time
+import pyautogui
+
+# end of imports
+
 version = 0.3
-print("WARNING: we are not responsible for any damage caused by this program.")
+
+os.system("cls")
 print("-----------------------------------------------------")
 print("Welcome to text spammer.")
 print("version: " + str(version))
