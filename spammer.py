@@ -54,7 +54,8 @@ print("-----------------------------------------------------")
 time.sleep(10)
 
 while times != 0:
-    pyautogui.write(text, interval=0.1)             # write the text and sets an interval to prevent bad use of this program                     # wait for the delay
+    pyautogui.write(text, interval=0.1)             # write the text and sets an interval to prevent bad use of this program
+    pyautogui.press("Enter")
     times = int(times) - 1
     print("-----------------------------------------------------")
     print(str(times) + "times left.")
