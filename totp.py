@@ -1,3 +1,4 @@
+import datetime
 import pyotp
 import time
 import os
@@ -10,18 +11,21 @@ totp_code = "jgc5sre7eshuskuc"
 #totp kodunuzu bir üstteki satıra girin.
 
 ####################
-#     settings     #
+# end of settings  #
 ####################
 
 
 #code start
 totp = pyotp.TOTP(totp_code)
+print("clearing screen...")
+time.sleep(0.2)
+os.system("cls")
 print("----------------------------------------------------")
-print("Doğrulama kodunuzu kimseyle paylaşmayınız.")
-print("")
-print("[KODU GORMEK ICIN ENTER BASIN]")
+print("Doğrulama kodunuz:")
 print("")
 print("")
+print("XXXXXX (X)")
+print("(!) Doğrulama kodunuzu görmek için ENTER basın.")
 print("")
 print("made by github.com/trashbin7")
 print("----------------------------------------------------")
@@ -29,13 +33,15 @@ input("")
 os.system("cls")
 
 while True:
-
+    totp = pyotp.TOTP(totp_code)
+    time_remaining = totp.interval - datetime.datetime.now().timestamp() % totp.interval
+    rtime_remaining = round(time_remaining)
     print("----------------------------------------------------")
-    print("Doğrulama kodunuzu kimseyle paylaşmayınız.")
+    print("Doğrulama kodunuz:")
     print("")
-    print(totp.now() + " " + "time_remaining")      #note to myself: remove the "" before fixing
-    print("(kodu yenilemek için ENTER basın.)")
     print("")
+    print(totp.now() + " ("+ str(rtime_remaining) +")")
+    print("(X) Çıkmak için bu ekranı kapatın.")
     print("")
     print("made by github.com/trashbin7")
     print("----------------------------------------------------")
