@@ -19,7 +19,7 @@ totp_code = "jgc5sre7eshuskuc"
 totp = pyotp.TOTP(totp_code)
 print("clearing screen...")
 time.sleep(0.2)
-os.system("cls")
+os.system('cls' if os.name == 'nt' else 'clear')
 print("----------------------------------------------------")
 print("Doğrulama kodunuz:")
 print("")
@@ -30,7 +30,7 @@ print("")
 print("made by github.com/trashbin7")
 print("----------------------------------------------------")
 input("")
-os.system("cls")
+os.system('cls' if os.name == 'nt' else 'clear')
 
 while True:
     totp = pyotp.TOTP(totp_code)
@@ -46,6 +46,6 @@ while True:
     print("made by github.com/trashbin7")
     print("----------------------------------------------------")
     time.sleep(1)
-    os.system("cls")
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 #code end
