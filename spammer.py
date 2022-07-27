@@ -1,6 +1,5 @@
 # imports
 import os
-import sys
 import time
 import pyautogui
 
