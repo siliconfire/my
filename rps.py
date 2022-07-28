@@ -239,3 +239,6 @@ if userrps == "Scissors":
         print("YOU WIN!")
         print("")
         print("-----------------------------------------------------")
+print("")
+print("made by github.com/trashbin7")
+input("Press ENTER to exit.")
