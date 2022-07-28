@@ -12,6 +12,7 @@ print("")
 print("")
 print("Bu bot hesapları banlatabilir, bu yüzden bir şifre girmeniz gerekir.")
 input("(!) şifreyi girmek için ENTER basınız.")
+
 enteredpass = pyautogui.password(text='Şifreyi girin.', title='Şifre lazım bana!', default='', mask='*')
 
 if enteredpass == "owobot14":       #şifre burada yazıyor kullanabilirsiniz, fakat hesabınız banlanırsa biz suçlu değiliz.
