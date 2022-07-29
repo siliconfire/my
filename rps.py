@@ -21,6 +21,14 @@ while user != 3 and enemy != 3:
         userrps = "Paper"
     elif userrps == "3":
         userrps = "Scissors"
+    elif userrps == "4":
+        userrps = "Rock"
+        print("you typed 4... so funny")
+        time.sleep(2)
+    else:
+        print("Picking random...")
+        time.sleep(0.3)
+        userrps = random.choice(["Rock", "Paper", "Scissors"])
     os.system('cls' if os.name == 'nt' else 'clear')
     print("-----------------------------------------------------")
     print(userrps + " it is!")
@@ -256,21 +264,41 @@ while user != 3 and enemy != 3:
             print("Score: " + str(user) + " - " + str(enemy)) 
             print("-----------------------------------------------------")
             time.sleep(2)
-time.sleep(1)
-if user == 3:
-    print("-----------------------------------------------------")
-    print("YOU WON!")
-    print("with the score of " + str(user) + " - " + str(enemy))
-    print("")
-    print("made by github.com/trashbin7")
-    print("(!) press ENTER to exit") 
-    print("-----------------------------------------------------")
-elif enemy == 3:
-    print("-----------------------------------------------------")
-    print("YOU LOST")
-    print("with the score of " + str(user) + " - " + str(enemy))
-    print("")
-    print("made by github.com/trashbin7")
-    print("(!) press ENTER to exit")
-    print("-----------------------------------------------------")
-input("")
+        time.sleep(1)
+    if user == 3:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("-----------------------------------------------------")
+        print("YOU WON!")
+
+    elif enemy == 3:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("-----------------------------------------------------")
+        print("YOU LOST")
+    if user == 3 or enemy == 3:
+        print("with the score of " + str(user) + " - " + str(enemy))
+        print("")
+        print("Pick one:")
+        print("1. [Continue] | 2. [Exit]") 
+        print("-----------------------------------------------------")
+        lastquestion = input("Enter your choice: ")
+        if lastquestion == "1":
+            print("(?) You chose to continue")
+            time.sleep(1.5)
+            print("loading...")
+            userrps = ""
+            enemyrps = ""
+            user = 0
+            enemy = 0
+            time.sleep(0.1)
+            os.system('cls' if os.name == 'nt' else 'clear')
+        if lastquestion == "2":
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("-----------------------------------------------------")
+            print("You chose to exit.")
+            print("bye!")
+            print("")
+            print("")
+            print("github.com/trashbin7") 
+            print("-----------------------------------------------------")
+            time.sleep(1)
+            exit()
