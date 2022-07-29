@@ -6,7 +6,9 @@ import os          # Import the os module to use the system function
 import keyboard    # Import the keyboard module to use the is_pressed function
 from colorama import Fore, Back, Style
 pickedlength = False
+pickedtype = False
 time.sleep(0.1)
+
 os.system('cls' if os.name == 'nt' else 'clear')
 print("-----------------------------------------------------")
 print("Welcome to the password generator!")
@@ -98,8 +100,52 @@ while pickedlength == False:
 print("-----------------------------------------------------")
 print("Pick a type of password:")
 print("")
-print("")
-print("")
-print("")
+print("[A] Only letters")
+print("[B] Letters and numbers")
+print("[C] Letters, numbers and symbols")
 print("")
 print("-----------------------------------------------------")
+while pickedtype == False:
+    if keyboard.is_pressed("a"):
+        type = "l"
+        time.sleep(0.3)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("-----------------------------------------------------")
+        print("Pick a type of password:")
+        print("")
+        print(Fore.GREEN + "[A] Only letters")
+        print(Style.RESET_ALL + "[B] Letters and numbers")
+        print("[C] Letters, numbers and symbols")
+        print("")
+        print("-----------------------------------------------------")
+        time.sleep(0.3)
+        pickedtype = True
+    elif keyboard.is_pressed("b"):
+        type = "ln"
+        time.sleep(0.3)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("-----------------------------------------------------")
+        print("Pick a type of password:")
+        print("")
+        print("[A] Only letters")
+        print(Fore.GREEN + "[B] Letters and numbers")
+        print(Style.RESET_ALL + "[C] Letters, numbers and symbols")
+        print("")
+        print("-----------------------------------------------------")
+        time.sleep(0.3)
+        pickedtype = True
+    elif keyboard.is_pressed("c"):
+        type = "lns"
+        time.sleep(0.3)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("-----------------------------------------------------")
+        print("Pick a type of password:")
+        print("")
+        print("[A] Only letters")
+        print("[B] Letters and numbers")
+        print(Fore.GREEN + "[C] Letters, numbers and symbols")
+        print(Style.RESET_ALL)
+        print("-----------------------------------------------------")
+        time.sleep(0.3)
+        pickedtype = True
+
