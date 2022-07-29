@@ -2,6 +2,7 @@ print("loading...")
 import random
 import os
 import time
+import sys 
 user = 0
 enemy = 0
 time.sleep(0.1)
