@@ -7,6 +7,9 @@ import keyboard    # Import the keyboard module to use the is_pressed function
 from colorama import Fore, Back, Style
 pickedlength = False
 pickedtype = False
+showingpassword = False
+timehere = 0
+password = ""
 time.sleep(0.1)
 
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -96,7 +99,8 @@ while pickedlength == False:
         print("-----------------------------------------------------")
         time.sleep(0.3)
         pickedlength = True
-
+keyboard.press_and_release("backspace")
+os.system('cls' if os.name == 'nt' else 'clear')
 print("-----------------------------------------------------")
 print("Pick a type of password:")
 print("")
@@ -148,4 +152,63 @@ while pickedtype == False:
         print("-----------------------------------------------------")
         time.sleep(0.3)
         pickedtype = True
-
+keyboard.press_and_release("backspace")
+if type == "l":
+    for i in range(length):
+        password = password + random.choice("abcdefghijklmnopqrstuvwxyz")
+elif type == "ln":
+    for i in range(length):
+        password = password + random.choice("abcdefghijklmnopqrstuvwxyz1234567890")
+elif type == "lns":
+    for i in range(length):
+        password = password + random.choice("abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()")
+os.system('cls' if os.name == 'nt' else 'clear')
+print("-----------------------------------------------------")
+print("Your very random password is:")
+print("XXXXXXXX")
+print("")
+print("[A] Show password")
+print("")
+print("")
+print("-----------------------------------------------------")
+keyboard.wait("a")
+os.system('cls' if os.name == 'nt' else 'clear')
+keyboard.press_and_release("backspace")
+print("-----------------------------------------------------")
+print("Your very random password is:")
+print(password)
+print("")
+print(Fore.GREEN + "[A] Show password")
+print(Style.RESET_ALL + "[B] Write password")
+print("[C] Exit")
+print("-----------------------------------------------------")
+print("")
+print("(!) wait before typing A, B or C")
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+while True:
+    time.sleep(1)
+    os.system('cls' if os.name == 'nt' else 'clear')
+    timehere = timehere + 1 
+    print("-----------------------------------------------------")
+    print("Your very random password is:")
+    print(password)
+    print("(" + str(timehere) + " seconds)")
+    print("")
+    print("[B] Write password")
+    print("[C] Exit")
+    print("-----------------------------------------------------")
+    if keyboard.is_pressed("b"):
+        keyboard.press_and_release("backspace")
+        print("Typing the password in 5 seconds...")
+        time.sleep(5)
+        keyboard.write(password)
+        print("task complete!")
+        time.sleep(1.5)
+        os.system('cls' if os.name == 'nt' else 'clear')
+    
+    elif keyboard.is_pressed("c"):
+        keyboard.press_and_release("backspace")
+        print("Bye!")
+        time.sleep(1.5)
+        sys.exit()
