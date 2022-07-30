@@ -66,8 +66,6 @@ async def on_ready():
     print(Fore.YELLOW + str(guild.name))
     print(Style.RESET_ALL + "(id: " + Fore.YELLOW + str(guild.id) + Style.RESET_ALL + ")")
     print()
-    print()
-    print()
     print("github.com/trashbin7")
     print("------------------------------------------------------")
 
