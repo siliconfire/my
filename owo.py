@@ -1,62 +1,67 @@
 import pyautogui
 import time
+
 counter = 0
+Triedagain = False
+Triedagain2 = False
 
-print("-------------------------------------")
-print("owoh yazan bot v1.4")
-print("")
 print("github.com/trashbin7")
-print("-------------------------------------")
-print("")
-print("")
-print("")
-print("Bu bot hesapları banlatabilir, bu yüzden bir şifre girmeniz gerekir.")
-input("(!) şifreyi girmek için ENTER basınız.")
+while Triedagain2 == False:
+    if Triedagain == False:
+        enteredpass = pyautogui.password(text='Enter the password', title='owo hunt', default='', mask='*')
+    elif Triedagain == True:
+        enteredpass = pyautogui.password(text='Your password was wrong. Try again!', title='owo hunt', default='', mask='*')
 
-enteredpass = pyautogui.password(text='Şifreyi girin.', title='Şifre lazım bana!', default='', mask='*')
-
-if enteredpass == "owobot14":       #şifre burada yazıyor kullanabilirsiniz, fakat hesabınız banlanırsa biz suçlu değiliz.
-    print("(!) Şifre doğru, bot 15 saniye içinde başlayacak.")
-    print("(i) Botu durdurmak için bu sayfayı kapatın.")
-    time.sleep(1)
-    print("Kalan Süre: 15 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 14 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 13 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 12 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 11 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 10 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 9 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 8 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 7 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 6 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 5 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 4 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 3 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 2 saniye")
-    time.sleep(1)
-    print("Kalan Süre: 1 saniye")
-    time.sleep(1)
-    print("(!) Bot başladı.")
-    print("(i) Botu durdurmak için bu sayfayı kapatın.")
-    while True:
-        pyautogui.write('owo hunt', interval=0.1)
+    if enteredpass == "owobot14":
+        print("Password correct")
+        print("")
         time.sleep(1)
-        pyautogui.press("Enter")
-        counter = counter + 1
-        print("bot " + str(counter) + " kez yazdı")
-        time.sleep(20)
-else:
-    print("(!) Şifre yanlış!")
+        print("Remaining time: 15 saniye")
+        time.sleep(1)
+        print("Remaining time: 14 saniye")
+        time.sleep(1)
+        print("Remaining time: 13 saniye")
+        time.sleep(1)
+        print("Remaining time: 12 saniye")
+        time.sleep(1)
+        print("Remaining time: 11 saniye")
+        time.sleep(1)
+        print("Remaining time: 10 saniye")
+        time.sleep(1)
+        print("Remaining time: 9 saniye")
+        time.sleep(1)
+        print("Remaining time: 8 saniye")
+        time.sleep(1)
+        print("Remaining time: 7 saniye")
+        time.sleep(1)
+        print("Remaining time: 6 saniye")
+        time.sleep(1)
+        print("Remaining time: 5 saniye")
+        time.sleep(1)
+        print("Remaining time: 4 saniye")
+        time.sleep(1)
+        print("Remaining time: 3 saniye")
+        time.sleep(1)
+        print("Remaining time: 2 saniye")
+        time.sleep(1)
+        print("Remaining time: 1 saniye")
+        time.sleep(1)
+        print("(!) Starting... Now!")
+        print("(i) Close this screen to stop this bot.")
+        while True:
+            pyautogui.write('owo hunt', interval=0.1)
+            time.sleep(1)
+            pyautogui.press("Enter")
+            counter = counter + 1
+            print("typed owo hunt " + str(counter) + " times")
+            time.sleep(20)
+    else:
+        if Triedagain == False:
+            print("(!) Wrong password! Try again.")
+            print()
+            Triedagain = True
+        elif Triedagain == True:
+            print()
+            print("Wrong password again???")
+            input("(!) Press [ENTER] to exit.")
+            Triedagain2 = True
