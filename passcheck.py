@@ -1,15 +1,15 @@
 import PySimpleGUI as sg
 import os
 import time
-
-# Define the window's contents
+wrongpass = 0
+passwordcorrect = False
 layout = [
-    [sg.Text("Enter the password."), sg.InputText(key='-TEXT-')],
+    [sg.Text("Enter the password.", key = "-TEXT-"),],
     [sg.InputText(key = '-EPASS-')],
     [sg.Button("Ok"), sg.Button("Cancel")]
 ]
 
-password = sg.Window('Şifre', layout)
+password = sg.Window('Password', layout)
 
 while True:
     event, values = password.read()
@@ -18,16 +18,29 @@ while True:
         break
 
     if event == "Ok":
+        password['-TEXT-'].update(f"Checking...")
+        password.refresh()
+
+
         if values['-EPASS-'] == "1234":
-            print("ok")
-            password.close()
+            passwordcorrect = True
+            time.sleep(2)
             break
+
+
         else:
-            print("wrong password")
-            passwordtext = "Wrong Password!"
-            password['-TEXT-'].update(passwordtext)
-            time.sleep(2.5)
-            passwordtext = "Enter the password."
-            password['-TEXT-'].update(passwordtext)
-            time.sleep(0.5)
-        print("error 1")
+            wrongpass = wrongpass + 1
+            password['-TEXT-'].update(f"Wrong password. Try again. ({wrongpass} wrong attempts)")
+            time.sleep(1)
+
+
+if passwordcorrect == True:
+    password['-TEXT-'].update(f"Loading...")
+    password.refresh()
+    print("password correct, going to main.py")
+    time.sleep(1)
+    password.close()
+    os.system("python3 main.py")
+
+else:
+    print("password incorrect, exiting")
