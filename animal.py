@@ -1,6 +1,7 @@
 import pyautogui as pg
 import time
 
+counter = 0
 print("yükleniyor...")
 txt = ["Canidae",
     "Felidae",

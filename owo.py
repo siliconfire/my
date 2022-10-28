@@ -47,7 +47,7 @@ while Triedagain2 == False:
         print("Remaining time: 1 saniye")
         time.sleep(1)
         print("(!) Starting... Now!")
-        print("(i) Close this screen to stop this bot.")
+        print("(i) Press ctrl + c to stop this bot.")
         while True:
             pyautogui.write('owo hunt', interval=0.1)
             time.sleep(1)
