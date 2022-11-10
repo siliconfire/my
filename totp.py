@@ -41,7 +41,7 @@ while True:
     print("")
     print("")
     print(totp.now() + " ("+ str(rtime_remaining) +")")
-    print("(X) Çıkmak için bu ekranı kapatın.")
+    print("(X) Çıkmak için CTRL+C basın.")
     print("")
     print("made by github.com/trashbin7")
     print("----------------------------------------------------")

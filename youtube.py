@@ -1,6 +1,6 @@
 import time
 while True:
-    print("YOUTUBE SIMULATOR")
+    print("YOUTUBE SIMULATOR)
     print("1. search a video")
     print("2. edit video")
     choice = int(input("Enter your choice: "))
@@ -26,4 +26,3 @@ while True:
         print("video edited")
         time.sleep(2)
         print("video closed")
-    
