@@ -1,7 +1,7 @@
 
-print("----------")
+print("---------------")
 print("Acun Simulator")
-print("----------")
+print("---------------")
 print(" ")
 input("(!) Başlamak için ENTER tuşuna basın.")
 print(" ")
