@@ -18,7 +18,7 @@ snake_body.fill(WHITE)
 # Set up the apple
 apple_position = (random.randint(0, 29) * 20, random.randint(0, 29) * 20)
 apple = pygame.Surface((20, 20))
-apple.fill(BLACK)
+apple.fill("RED")
 
 # Set up the direction variables
 UP = (0, -20)
