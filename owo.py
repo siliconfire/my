@@ -15,6 +15,7 @@ while Triedagain2 == False:
     if enteredpass == "owobot14":
         print("Password correct")
         print("")
+        stopat = input("stop at: ")
         time.sleep(1)
         print("Remaining time: 15 saniye")
         time.sleep(1)
@@ -49,12 +50,16 @@ while Triedagain2 == False:
         print("(!) Starting... Now!")
         print("(i) Press ctrl + c to stop this bot.")
         while True:
-            pyautogui.write('owo hunt', interval=0.1)
+            pyautogui.write('owo hunt', interval=0.2)
             time.sleep(1)
             pyautogui.press("Enter")
             counter = counter + 1
             print("typed owo hunt " + str(counter) + " times")
             time.sleep(20)
+            if counter == int(stopat):
+                while True:
+                    print("finished")
+                    time.sleep(2)
     else:
         if Triedagain == False:
             print("(!) Wrong password! Try again.")
