@@ -55,7 +55,7 @@ while Triedagain2 == False:
             pyautogui.press("Enter")
             counter = counter + 1
             print("typed owo hunt " + str(counter) + " times")
-            time.sleep(20)
+            time.sleep(40)
             if counter == int(stopat):
                 while True:
                     print("finished")
