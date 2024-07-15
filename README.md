@@ -1,1 +1,1 @@
-where things i did before mostly lives
+where weird things i did before mostly lives
