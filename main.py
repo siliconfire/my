@@ -1,5 +1,3 @@
-# thanks to everyone on the discord for the idea!
-
 # github.com/siliconfire
 
 print("\n")
